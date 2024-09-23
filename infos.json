@@ -25,7 +25,7 @@
       },
       "hobbies": "Jeux vidéos, art",
       "background": "path/to/background.webp",
-      "photo": "path/to/Aledorian.webp"
+      "photo": "images/aledorian.webp"
     },
     {
       "name": "Lamour",
@@ -39,7 +39,7 @@
       },
       "hobbies": "Randonnée, Lecture",
       "background": "path/to/background.webp",
-      "photo": "path/to/Marine.webp"
+      "photo": "images/marine.webp"
     },
     {
       "name": "Lesaffre",
@@ -53,7 +53,7 @@
       },
       "hobbies": "Dessin, jeux vidéo",
       "background": "path/to/background.webp",
-      "photo": "path/to/Marilyne.webp"
+      "photo": "images/maryline.webp"
     },
     {
       "name": "Eeckman",
@@ -67,7 +67,7 @@
       },
       "hobbies": "Cause animale, environnement, chorale",
       "background": "path/to/background.webp",
-      "photo": "path/to/Perrine.webp"
+      "photo": "images/perrine.webp"
     },
     {
       "name": "Bourgeois",
@@ -81,7 +81,7 @@
       },
       "hobbies": "Randonnée Musique",
       "background": "path/to/background.webp",
-      "photo": "path/to/Philippe.webp"
+      "photo": "images/philippe.webp"
     },
     {
       "name": "Créteur",
@@ -95,7 +95,7 @@
       },
       "hobbies": "Écriture Musique",
       "background": "path/to/background.webp",
-      "photo": "path/to/Térence.webp"
+      "photo": "images/terence.webp"
     },
     {
       "name": "Vanherzecke",
@@ -109,10 +109,10 @@
       },
       "hobbies": "Randonnées, informatique, lecture",
       "background": "path/to/background.webp",
-      "photo": "path/to/Yohann.webp"
+      "photo": "images/yohann.webp"
     },
     {
-      "name": "Florent Broutin",
+      "name": "Broutin",
       "prenom": "Florent",
       "latitude": 50.95836859866863,
       "longitude": 1.8931831355338746,
@@ -123,10 +123,10 @@
       },
       "hobbies": "Informatique, jeux vidéo",
       "background": "path/to/background.webp",
-      "photo": "path/to/Florent.webp"
+      "photo": "images/florent.webp"
     },
     {
-      "name": "Julie Charles",
+      "name": "Charles",
       "prenom": "Julie",
       "latitude": 50.72548791837526,
       "longitude": 1.6122502046759923,
@@ -137,10 +137,10 @@
       },
       "hobbies": "Cinéma, mode",
       "background": "path/to/background.webp",
-      "photo": "path/to/Julie.webp"
+      "photo": "images/julie.webp"
     },
     {
-      "name": "Maxence Hermant",
+      "name": "Hermant",
       "prenom": "Maxence",
       "latitude": 50.735764715867255,
       "longitude": 2.300809568620041,
@@ -151,10 +151,10 @@
       },
       "hobbies": "MMA, jeux vidéo",
       "background": "path/to/background.webp",
-      "photo": "path/to/Maxence.webp"
+      "photo": "images/Maxence.webp"
     },
     {
-      "name": "Nicolas Herbez",
+      "name": "Herbez",
       "prenom": "Nicolas",
       "latitude": 50.639873167303776,
       "longitude": 1.745547470464413,
@@ -165,10 +165,10 @@
       },
       "hobbies": "blank",
       "background": "path/to/background.webp",
-      "photo": "path/to/Nicolas.webp"
+      "photo": "images/Nicolas.webp"
     },
     {
-      "name": "Rémy Cottrez",
+      "name": "Cottrez",
       "prenom": "Rémy",
       "latitude": 50.62165081298511,
       "longitude": 2.3937801028682903,
@@ -179,7 +179,7 @@
       },
       "hobbies": "blank",
       "background": "path/to/background.webp",
-      "photo": "path/to/Rémy.webp"
+      "photo": "images/Remy.webp"
     }
   ]
   
