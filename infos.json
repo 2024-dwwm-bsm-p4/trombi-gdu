@@ -58,15 +58,15 @@
     {
       "name": "Eeckman",
       "prenom": "Perrine",
-      "latitude": 50.68205122488254,
-      "longitude": 1.6243349379334344,
+      "latitude": 50.72548791837526,
+      "longitude": 1.6122502046759923,
       "ville": "Boulogne sur mer",
       "stack": ["HTML", "CSS"],
       "socials": {
         "linkedin": "https://www.linkedin.com/in/perrine-eeckman-193969222/"
       },
       "hobbies": "Cause animale, environnement, chorale",
-      "background": "path/to/background.webp",
+      "background": "images/cute-animal-pattern-background-wallpaper-paw-print-vector-illustration_53876-146422.avif", 
       "photo": "images/perrine.webp"
     },
     {
@@ -128,8 +128,8 @@
     {
       "name": "Charles",
       "prenom": "Julie",
-      "latitude": 50.72548791837526,
-      "longitude": 1.6122502046759923,
+      "latitude":50.737206235597164,
+      "longitude":1.62235 ,
       "ville": "Boulogne sur mer",
       "stack": ["HTML", "CSS"],
       "socials": {
@@ -170,14 +170,14 @@
     {
       "name": "Cottrez",
       "prenom": "Rémy",
-      "latitude": 50.62165081298511,
-      "longitude": 2.3937801028682903,
-      "ville": "Lambres",
-      "stack": ["HTML", "CSS", "JS"],
+      "latitude": 50.73248953086215, 
+      "longitude": 2.303572797827876,
+      "ville": "Arques",
+      "stack": ["HTML", "CSS", "JS", "Figma", "MongoDB", "NextJS", "React","PostgreSQL", "NodeJS", "MySQL", "Swagger"],
       "socials": {
         "linkedin": "https://www.linkedin.com/in/remyco/"
       },
-      "hobbies": "blank",
+      "hobbies": "Jeux vidéo, cinéma, séries, developpement web",
       "background": "path/to/background.webp",
       "photo": "images/Remy.webp"
     }
