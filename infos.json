@@ -1,0 +1,185 @@
+[
+    {
+      "name": "Dupont",
+      "prenom": "Grégoire",
+      "latitude": 50.65414,
+      "longitude": 1.63452,
+      "ville": "Condette",
+      "stack": ["HTML", "CSS", "JS", "C#"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/gr%C3%A9goire-dupont-801355328/"
+      },
+      "hobbies": "Informatique, jeux vidéo, univers pop culture, arts créatifs",
+      "background": "path/to/background.webp",
+      "photo": "images/gregoire.webp"
+    },
+    {
+      "name": "Legrand",
+      "prenom": "Aledorian",
+      "latitude": 50.72816663437951,
+      "longitude": 1.6085496091491847,
+      "ville": "Boulevard clocheville Boulogne sur mer",
+      "stack": ["HTML", "CSS", "JS", "PHP"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/aledorian-legrand/"
+      },
+      "hobbies": "Jeux vidéos, art",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Aledorian.webp"
+    },
+    {
+      "name": "Lamour",
+      "prenom": "Marine",
+      "latitude": 50.72615395483013,
+      "longitude": 1.605238809099898,
+      "ville": "Rue Saint Louis Boulogne Sur Mer",
+      "stack": ["HTML", "CSS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/marine-lamour-8a1747278/"
+      },
+      "hobbies": "Randonnée, Lecture",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Marine.webp"
+    },
+    {
+      "name": "Lesaffre",
+      "prenom": "Marilyne",
+      "latitude": 50.7, 
+      "longitude": 1.6, 
+      "ville": "Le Portel",
+      "stack": ["HTML", "CSS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/marilyne-lesaffre/"
+      },
+      "hobbies": "Dessin, jeux vidéo",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Marilyne.webp"
+    },
+    {
+      "name": "Eeckman",
+      "prenom": "Perrine",
+      "latitude": 50.68205122488254,
+      "longitude": 1.6243349379334344,
+      "ville": "Boulogne sur mer",
+      "stack": ["HTML", "CSS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/perrine-eeckman-193969222/"
+      },
+      "hobbies": "Cause animale, environnement, chorale",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Perrine.webp"
+    },
+    {
+      "name": "Bourgeois",
+      "prenom": "Philippe",
+      "latitude": 50.71789827170887,
+      "longitude": 1.605626853277117,
+      "ville": "Rue Ferdinand Buisson Boulogne sur mer",
+      "stack": ["HTML", "CSS", "MYSQL", "SYMFONY"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/philippe-bourgeois-76662723b/"
+      },
+      "hobbies": "Randonnée Musique",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Philippe.webp"
+    },
+    {
+      "name": "Créteur",
+      "prenom": "Térence",
+      "latitude": 50.72372133213707,
+      "longitude": 1.6091759397839611,
+      "ville": "Rue des Pipots Boulogne sur mer",
+      "stack": ["HTML", "CSS", "JS", "C#"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/t%C3%A9rence-cr%C3%A9teur-00aaa81b0/"
+      },
+      "hobbies": "Écriture Musique",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Térence.webp"
+    },
+    {
+      "name": "Vanherzecke",
+      "prenom": "Yohann",
+      "latitude": 50.953061582627086,
+      "longitude": 1.854471972943669,
+      "ville": "Calais",
+      "stack": ["HTML", "CSS", "JS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/vanherzecke-yohann-a49587177/"
+      },
+      "hobbies": "Randonnées, informatique, lecture",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Yohann.webp"
+    },
+    {
+      "name": "Florent Broutin",
+      "prenom": "Florent",
+      "latitude": 50.95836859866863,
+      "longitude": 1.8931831355338746,
+      "ville": "Calais",
+      "stack": ["HTML", "CSS", "JS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/florent-broutin-40b651271/"
+      },
+      "hobbies": "Informatique, jeux vidéo",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Florent.webp"
+    },
+    {
+      "name": "Julie Charles",
+      "prenom": "Julie",
+      "latitude": 50.72548791837526,
+      "longitude": 1.6122502046759923,
+      "ville": "Boulogne sur mer",
+      "stack": ["HTML", "CSS"],
+      "socials": {
+        "linkedin": "https://linkedin.com/in/julie-c-92207a294"
+      },
+      "hobbies": "Cinéma, mode",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Julie.webp"
+    },
+    {
+      "name": "Maxence Hermant",
+      "prenom": "Maxence",
+      "latitude": 50.735764715867255,
+      "longitude": 2.300809568620041,
+      "ville": "Arques",
+      "stack": ["HTML", "CSS", "JS", "PHP", "MYSQL"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/maxence-hermant-501583328/"
+      },
+      "hobbies": "MMA, jeux vidéo",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Maxence.webp"
+    },
+    {
+      "name": "Nicolas Herbez",
+      "prenom": "Nicolas",
+      "latitude": 50.639873167303776,
+      "longitude": 1.745547470464413,
+      "ville": "Samer",
+      "stack": ["HTML", "CSS", "JS", "PHP", "SYMFONY", "MYSQL"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/nicolas-herbez-hdf/"
+      },
+      "hobbies": "blank",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Nicolas.webp"
+    },
+    {
+      "name": "Rémy Cottrez",
+      "prenom": "Rémy",
+      "latitude": 50.62165081298511,
+      "longitude": 2.3937801028682903,
+      "ville": "Lambres",
+      "stack": ["HTML", "CSS", "JS"],
+      "socials": {
+        "linkedin": "https://www.linkedin.com/in/remyco/"
+      },
+      "hobbies": "blank",
+      "background": "path/to/background.webp",
+      "photo": "path/to/Rémy.webp"
+    }
+  ]
+  
