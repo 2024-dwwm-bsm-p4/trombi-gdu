@@ -1,0 +1,23 @@
+#map {
+    height: 75vh;
+    width: 75vw;
+    margin: 0 auto;
+}
+
+@media (max-width: 1024px) {
+    #map {
+        width: 90vw;
+    }
+}
+
+@media (max-width: 768px) {
+    #map {
+        width: 100vw;
+        height: 70vh;
+    }
+}
+
+.gregoire {
+    border-radius: 50px;
+    border : 2px solid yellow;
+}
