@@ -1,22 +1,18 @@
 var map = L.map("map").setView([50.8, 1.6], 10);
-
 L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
   attribution: "© OpenStreetMap contributors",
 }).addTo(map);
-
 const markers = [];
-
 fetch("infos.json")
   .then((response) => response.json())
   .then((data) => {
     data.forEach((person, index) => {
       const customIcon = L.icon({
         iconUrl: person.photo,
-        iconSize: [50, 50], main.js
+        iconSize: [50, 50], 
         iconAnchor: [25, 50],
         className: 'rounded-icon'
       });
-
       var stackIcons = person.stackIcons
         .map(
           (iconData) => `
@@ -26,7 +22,6 @@ fetch("infos.json")
         `
         )
         .join("");
-
       var popupContent = `
         <div style="background-image: url('${person.background}'); padding: 10px; background-size: cover;">
           <img src="${person.photo}" alt="${person.name}" class="profile-photo">  
@@ -38,18 +33,14 @@ fetch("infos.json")
           <div class="info"><strong>Liens:</strong> <a href="${person.socials.linkedin}" target="_blank">LinkedIn</a></div>
         </div>
       `;
-
       var marker = L.marker([person.latitude, person.longitude], { icon: customIcon })
         .bindPopup(popupContent);
-
       marker.addTo(map);
       markers.push(marker);
-
       displayContactInList(person, index); // Appelle la fonction pour afficher les contacts
     });
   })
   .catch((error) => console.error("Erreur lors du chargement des données JSON:", error));
-
 function displayContactInList(person, index) {
   const contactsContainer = document.querySelector(".inserCard");
   const cardHTML = `
@@ -69,7 +60,6 @@ function displayContactInList(person, index) {
   `;
   contactsContainer.insertAdjacentHTML("beforeend", cardHTML);
 }
-
 function flyToMarker(index) {
   const marker = markers[index];
   if (marker) {
@@ -77,7 +67,6 @@ function flyToMarker(index) {
     marker.openPopup();
   }
 }
-
 const searchInput = document.getElementById("searchInput");
 searchInput.addEventListener("input", () => {
   const searchValue = searchInput.value.toLowerCase();
