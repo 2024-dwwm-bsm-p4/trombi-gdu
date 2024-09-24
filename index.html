@@ -4,60 +4,53 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin="" />
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-    <title>Document</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <title>Trombinoscope Simplon 2024</title>
   </head>
   <body>
     <div class="container">
       <div class="title">
-        <label for="search">recherche</label>
+        <label for="search">Recherche</label>
         <input type="text" name="search" id="searchInput" placeholder="Rechercher un contact..." />
-        <h1>trombinoscope</h1>
-        <!-- <button id="openModalBtn">S'inscrire</button> -->
-
+        <h1>Trombinoscope</h1>
       </div>
       <div class="globalContent">
         <div class="containerLeft">
-          <h2>Apprenant Simplon</h2>
-          <div class="inserCard">
-
-
-          </div>
+          <h2>Apprenants Simplon</h2>
+          <div class="inserCard"></div>
         </div>
         <div class="containerRight">
-            <!-- map -->
-            <div id="map"></div>
-
+          <div id="map"></div>
         </div>
       </div>
     </div>
 
     <div id="signupModal" class="modal">
-        <div class="modal-content">
-          <span class="close">&times;</span>
-          <h2>Formulaire d'inscription</h2>
-          <form id="signupForm">
-            <label for="prenom">Prénom:</label>
-            <input type="text" id="prenom" name="prenom" required>
-      
-            <label for="name">Nom:</label>
-            <input type="text" id="name" name="name" required>
-      
-            <label for="ville">Ville:</label>
-            <input type="text" id="ville" name="ville" required>
-      
-            <label for="photo">Photo URL:</label>
-            <input type="url" id="photo" name="photo" required>
-      
-            <label for="stack">Stack:</label>
-            <input type="text" id="stack" name="stack" required>
-      
-            <button type="submit">Envoyer</button>
-          </form>
-        </div>
-      </div>
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Formulaire d'inscription</h2>
+        <form id="signupForm">
+          <label for="prenom">Prénom:</label>
+          <input type="text" id="prenom" name="prenom" required />
 
-   <script src="main.js"></script>
+          <label for="name">Nom:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="ville">Ville:</label>
+          <input type="text" id="ville" name="ville" required />
+
+          <label for="photo">Photo URL:</label>
+          <input type="url" id="photo" name="photo" required />
+
+          <label for="stack">Stack:</label>
+          <input type="text" id="stack" name="stack" required />
+
+          <button type="submit">Envoyer</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
