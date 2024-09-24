@@ -1,18 +1,22 @@
-var map = L.map('map').setView([50.80, 1.6], 10);
+var map = L.map("map").setView([50.8, 1.6], 10);
 
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: "© OpenStreetMap contributors",
 }).addTo(map);
 
-fetch('infos.json') 
-  .then(response => response.json())
-  .then(data => {
-    data.forEach(person => {
+fetch("infos.json")
+  .then((response) => response.json())
+  .then((data) => {
+    data.forEach((person) => {
       var marker = L.marker([person.latitude, person.longitude]).addTo(map);
-      
-      var stackIcons = person.stackIcons.map(iconData => `
+
+      var stackIcons = person.stackIcons
+        .map(
+          (iconData) => `
         <img src="${iconData.icon}" alt="${iconData.name}" title="${iconData.name}" width="30px" height="30px" style="margin-right: 5px;">
-      `).join('');
+      `
+        )
+        .join("");
 
       var popupContent = `
         <div style="background-image: url('${person.background}'); padding: 10px; background-size: cover;">
@@ -32,4 +36,6 @@ fetch('infos.json')
       marker.bindPopup(popupContent);
     });
   })
-  .catch(error => console.error('Erreur lors du chargement des données JSON:', error));
+  .catch((error) =>
+    console.error("Erreur lors du chargement des données JSON:", error)
+  );
