@@ -1,4 +1,6 @@
-[
+// Initialiser la carte sur une vue de la France
+
+const contacts = [
   {
     "name": "Dupont",
     "prenom": "Grégoire",
@@ -276,3 +278,195 @@
     "photo": "images/Remy.webp"
   }
 ]
+const map = L.map("map").setView([46.603354, 1.888334], 6); // Coordonnées de la France
+
+// Ajouter une couche de tuiles OpenStreetMap
+L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
+  attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+}).addTo(map);
+
+const markers = [];
+console.log(markers);
+
+
+// Fonction pour ajouter un marqueur personnalisé
+function addCustomMarker(person) {
+  const customIcon = L.icon({
+    iconUrl: person.photo, // Utilisation de la photo de la personne comme icône
+    iconSize: [50, 50], // Taille de l'icône
+    iconAnchor: [25, 50], // Point d'ancrage de l'icône
+  });
+
+  // Création du contenu du popup
+  const stackIcons = person.stackIcons
+        .map(
+          (iconData) => `
+        <div class="stack-icon">
+          <img src="${iconData.icon}" alt="${iconData.name}" title="${iconData.name}">
+        </div>
+      `
+        )
+        .join("");
+
+  const popupContent = `
+  <div class="backgroundPopup" style="background-image: url('${person.background}'); padding: 10px; background-size: cover;">
+    <img src="${person.photo}" alt="${person.name}" class="profile-photo">  
+    <h2>${person.prenom} ${person.name}</h2>
+    <div class="info"><strong>Ville:</strong> ${person.ville}</div>
+    <div class="info"><strong>Stack:</strong></div>
+    <div class="stack-icons">${stackIcons}</div>
+    <div class="info"><strong>Hobbies:</strong> ${person.hobbies}</div>
+    <div class="info"><strong>Liens:</strong> <a href="${person.socials.linkedin}" target="_blank">LinkedIn</a></div>
+  </div>
+`;
+
+  // Création du marqueur avec l'icône personnalisée mais ne l'ajoute pas à la carte immédiatement
+  const marker = L.marker([person.latitude, person.longitude], { icon: customIcon })
+    .bindPopup(popupContent);
+
+  markers.push(marker); // Conserver le marqueur dans le tableau pour un accès ultérieur
+}
+
+// Récupération des données depuis le fichier JSON et ajout des marqueurs
+
+    contacts.forEach(person => {
+      // Ajoute un marqueur personnalisé pour chaque personne
+      addCustomMarker(person);
+    });
+  
+
+// Fonction pour ajouter un marqueur personnalisé
+function addCustomMarker(contact) {
+  const customIcon = L.icon({
+    iconUrl: contact.photo, // Utilisation de la photo de la personne comme icône
+    iconSize: [50, 50], // Taille de l'icône
+    iconAnchor: [25, 50], // Point d'ancrage de l'icône
+  });
+
+  // Création du contenu du popup
+  const stackIcons = contact.stackIcons
+    .map(iconData => `
+      <img src="${iconData.icon}" alt="${iconData.name}" title="${iconData.name}" width="30px" height="30px" style="margin-right: 5px;">
+    `)
+    .join("");
+
+    const popupContent = `
+    <div style="background-image: url('${contact.background}'); padding: 10px; background-size: cover;">
+      <h2>${contact.prenom} ${contact.name}</h2>
+      <img src="${contact.photo}" alt="${contact.name}" width="100px" height="100px">
+      <p><strong>Ville:</strong> ${contact.ville}</p>
+      <p><strong>Stack:</strong></p>
+      <div>${stackIcons}</div> <!-- Correction ici -->
+      <p><strong>Hobbies:</strong> ${contact.hobbies}</p>
+      <p><strong>Liens:</strong></p>
+      <ul>
+        <li><a href="${contact.socials.linkedin}" target="_blank">LinkedIn</a></li>
+      </ul>
+    </div>
+  `;
+  
+
+  // Création du marqueur avec l'icône personnalisée et le contenu du popup
+  const marker = L.marker([contact.latitude, contact.longitude], { icon: customIcon })
+    .bindPopup(popupContent);
+
+  markers.push(marker); // Conserver le marqueur dans le tableau pour un accès ultérieur
+}
+
+// Appel de la fonction pour chaque contact
+contacts.forEach(contact => {
+  addCustomMarker(contact);
+});
+
+
+// Fonction pour afficher les contacts dans le DOM
+function displayContacts(filteredContacts) {
+  const contactsContainer = document.querySelector(".inserCard");
+  contactsContainer.innerHTML = ""; // Vider le conteneur avant d'ajouter les cartes
+
+  filteredContacts.forEach((contact, index) => {
+    const cardHTML = `
+      <div class="contact-card">
+          <div class="header">
+              <img src="${contact.photo}" class="photoProfil" alt="photo apprenant">
+              <div class="nameVille">
+                  <h3>${contact.prenom} ${contact.name}</h3>
+                  <p>
+                    <a href="#" onclick="flyToMarker(${index}); return false;">
+                      ${contact.ville}
+                    </a>
+                  </p>
+              </div>
+          </div>
+          <p><a href="${contact.socials.linkedin}" target="_blank">LinkedIn</a></p>
+          <p>Hobbies: ${contact.hobbies}</p>
+      </div>
+    `;
+    // Ajouter la carte dans la section contacts
+    contactsContainer.insertAdjacentHTML("beforeend", cardHTML);
+
+    // Ajouter le marqueur correspondant
+    addCustomMarker(contact, index);
+  });
+}
+
+// Fonction pour effectuer le "fly to" vers un marqueur
+function flyToMarker(index) {
+  const marker = markers[index];
+  if (marker) {
+    map.flyTo(marker.getLatLng(), 13); // Zoomer vers le marqueur
+    marker.addTo(map).openPopup(); // Afficher le marqueur et son popup
+  }
+}
+
+// Afficher tous les contacts initialement
+displayContacts(contacts);
+
+// Ajouter l'écouteur d'événements pour le champ de recherche
+const searchInput = document.getElementById("searchInput");
+searchInput.addEventListener("input", () => {
+  const searchValue = searchInput.value.toLowerCase(); // Obtenir la valeur de recherche en minuscules
+  const filteredContacts = contacts.filter((contact) => {
+    return `${contact.prenom} ${contact.name}`
+      .toLowerCase()
+      .includes(searchValue);
+  });
+  displayContacts(filteredContacts); // Afficher uniquement les contacts filtrés
+});
+
+// Gérer l'ouverture et la fermeture du modal
+const openModalBtn = document.getElementById('openModalBtn');
+const modal = document.getElementById('signupModal');
+const closeModal = document.getElementsByClassName('close')[0];
+
+openModalBtn.onclick = function() {
+    modal.style.display = "block";
+}
+
+closeModal.onclick = function() {
+    modal.style.display = "none";
+}
+
+window.onclick = function(event) {
+    if (event.target === modal) {
+        modal.style.display = "none";
+    }
+}
+
+const signupForm = document.getElementById('signupForm');
+
+signupForm.onsubmit = function(e) {
+    e.preventDefault(); 
+    const formData = {
+        prenom: e.target.prenom.value,
+        name: e.target.name.value,
+        ville: e.target.ville.value,
+        photo: e.target.photo.value,
+        stack: e.target.stack.value.split(',').map(item => item.trim()), // Transformer en tableau
+    };
+
+    console.log('Données du formulaire:', formData); // Loguer les données
+
+    modal.style.display = "none";
+    signupForm.reset();
+}
