@@ -137,7 +137,7 @@
       { "name": "CSS", "icon": "icons/css3.svg" }
     ],
     "socials": {
-      "linkedin": "?"
+      "linkedin": "https://www.linkedin.com/in/sachadiereman/"
     },
     "hobbies": "Techo/Hardtech, Sport",
     "background": "images/yc-space-manufacturing.webp",
@@ -243,17 +243,6 @@
     "longitude": 2.303572797827876,
     "ville": "Arques",
     "stack": [
-      "HTML",
-      "CSS",
-      "JS",
-      "Figma",
-      "MongoDB",
-      "NextJS",
-      "React",
-      "PostgreSQL",
-      "NodeJS",
-      "MySQL",
-      "Swagger"
     ],
     "stackIcons": [
       { "name": "HTML", "icon": "icons/html5.svg" },

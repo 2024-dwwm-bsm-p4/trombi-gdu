@@ -13,23 +13,22 @@ fetch("infos.json")
       var stackIcons = person.stackIcons
         .map(
           (iconData) => `
-        <img src="${iconData.icon}" alt="${iconData.name}" title="${iconData.name}" width="30px" height="30px" style="margin-right: 5px;">
+        <div class="stack-icon">
+          <img src="${iconData.icon}" alt="${iconData.name}" title="${iconData.name}">
+        </div>
       `
         )
         .join("");
 
       var popupContent = `
         <div style="background-image: url('${person.background}'); padding: 10px; background-size: cover;">
+          <img src="${person.photo}" alt="${person.name}" class="profile-photo">  
           <h2>${person.prenom} ${person.name}</h2>
-          <img src="${person.photo}" alt="${person.name}" width="100px" height="100px">
-          <p><strong>Ville:</strong> ${person.ville}</p>
-          <p><strong>Stack:</strong></p>
-          <div>${stackIcons}</div>
-          <p><strong>Hobbies:</strong> ${person.hobbies}</p>
-          <p><strong>Liens:</strong></p>
-          <ul>
-            <li><a href="${person.socials.linkedin}" target="_blank">LinkedIn</a></li>
-          </ul>
+          <div class="info"><strong>Ville:</strong> ${person.ville}</div>
+          <div class="info"><strong>Stack:</strong></div>
+          <div class="stack-icons">${stackIcons}</div>
+          <div class="info"><strong>Hobbies:</strong> ${person.hobbies}</div>
+          <div class="info"><strong>Liens:</strong> <a href="${person.socials.linkedin}" target="_blank">LinkedIn</a></div>
         </div>
       `;
 
